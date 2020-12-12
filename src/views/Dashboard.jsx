@@ -18,7 +18,7 @@
 import React, { useState } from "react";
 import ChartistGraph from "react-chartist";
 import { Grid, Row, Col, Table, Alert } from "react-bootstrap";
-import { thArray, tdArray } from "variables/Variables.jsx";
+import { thArray, tdArray } from "../variables/Variables.jsx";
 
 
 import { Card } from "../components/Card/Card.jsx";
