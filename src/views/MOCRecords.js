@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Table, Grid } from "react-bootstrap";
-import { thArray, tdArray } from "variables/Variables.jsx";
+import { thArray, tdArray } from "../variables/Variables.jsx";
 import { Link } from "react-router-dom";
 
 const MOCRecords = () => {

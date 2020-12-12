@@ -95,13 +95,13 @@ const dashboardRoutes = [
   //   component: Maps,
   //   layout: "/admin",
   // },
-  {
-    path: "/notifications",
-    name: "Notifications",
-    icon: "pe-7s-bell",
-    component: Notifications,
-    layout: "/admin",
-  },
+  // {
+  //   path: "/notifications",
+  //   name: "Notifications",
+  //   icon: "pe-7s-bell",
+  //   component: Notifications,
+  //   layout: "/admin",
+  // },
   // {
   //   upgrade: true,
   //   path: "/upgrade",
