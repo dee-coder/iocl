@@ -32,9 +32,15 @@ import Loginpage from "../src/views/Login";
 ReactDOM.render(
   <BrowserRouter basename="/">
     <Switch>
-     <Route path="/login" component={Loginpage}/> 
-      <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-      <Redirect from="/" to="/admin/dashboard" />
+      <Route path="/login" component={Loginpage} />
+      {localStorage.getItem("info") === null ? (
+        <Redirect from="/" to="/login" />
+      ) : (
+        <div>
+          <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
+          <Redirect from="/" to="/admin/dashboard" />
+        </div>
+      )}
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

@@ -15,12 +15,17 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { NavItem, Nav, NavDropdown, MenuItem } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link,Redirect } from "react-router-dom";
 
-class AdminNavbarLinks extends Component {
-  render() {
+const  AdminNavbarLinks = ()=> {
+
+  const [Redirects,setRedirectsToLogin] = useState(false);
+  const doLogout = () =>{
+    localStorage.removeItem("info");
+    setRedirectsToLogin(true);
+  }
     const notification = (
       <div>
         <i className="fa fa-globe" />
@@ -31,6 +36,7 @@ class AdminNavbarLinks extends Component {
     );
     return (
       <div>
+        {Redirects && <Redirect to="/login"/>}
         <Nav>
           <NavItem eventKey={1} href="#">
             
@@ -71,13 +77,14 @@ class AdminNavbarLinks extends Component {
             <MenuItem divider />
             <MenuItem eventKey={2.5}>Separated link</MenuItem>
           </NavDropdown> */}
-          <NavItem eventKey={3} href="#">
+          <NavItem eventKey={3} onClick = {(e)=>doLogout()}>
+            
             Log out
           </NavItem>
         </Nav>
       </div>
     );
-  }
+ 
 }
 
 export default AdminNavbarLinks;
