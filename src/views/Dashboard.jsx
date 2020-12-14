@@ -38,19 +38,21 @@ import {
   legendBar
 } from "../variables/Variables.jsx";
 
+const createLegend = (json) => {
+  var legend = [];
+  for (var i = 0; i < json["names"].length; i++) {
+    var type = "fa fa-circle text-" + json["types"][i];
+    legend.push(<i className={type} key={i} />);
+    legend.push(" ");
+    legend.push(json["names"][i]);
+  }
+  return legend;
+};
+
 const Dashboard = () => {
   
   const [ShowAlert, setShowAlert] = useState(true);
-  const createLegend = (json)=> {
-    var legend = [];
-    for (var i = 0; i < json["names"].length; i++) {
-      var type = "fa fa-circle text-" + json["types"][i];
-      legend.push(<i className={type} key={i} />);
-      legend.push(" ");
-      legend.push(json["names"][i]);
-    }
-    return legend;
-  }
+  
 
   
   
