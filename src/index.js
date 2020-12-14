@@ -29,7 +29,7 @@ import "./assets/css/pe-icon-7-stroke.css";
 import AdminLayout from "./layouts/Admin";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/React">
     <Switch>
       <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
       <Redirect from="/" to="/admin/dashboard" />
