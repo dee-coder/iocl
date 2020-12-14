@@ -74,25 +74,35 @@ const Dashboard = () => {
                       notification. So you don't have to worry about the style.
                     </span>
                   </Alert></div> */}
-              {ShowAlert &&  <Alert bsStyle="warning"   style = {{padding:'30px',borderRadius:'5px'}} >
-                    <button type="button" aria-hidden="true" className="close" style ={{marginRight:'20px',marginTop:'-30px'}} onClick = {(e)=>setShowAlert(false)}>
-                      &#x2715;
-                    </button>
-                    <span>
-                  MOC #1234 will be expired in 3 days.<br />
+              {ShowAlert &&  <Alert bsStyle="info"   style = {{padding:'30px',borderRadius:'5px',marginTop:'30px'}} >
+                <Row>
+                  <Col lg={8} className="d-flex justify-content-center">
+                  <span style ={{fontSize:'15px',fontWeight:'600'}}>
+                  MOC #1234 will be expired in 3 days.</span><br /><br/>
+                 
+                  </Col>
+                  <Col lg={4} >
+                    <div className="d-flex justify-content-center" style={ {float:'right'}}>
+
+                    
                   <button className="btn btn-primary">
                     View MOC
                   </button>
-                  <button className="btn btn-secondary">
-                    Not Now
+                  <button style = {{marginLeft:'20px'}} className="btn btn-secondary"  onClick = {(e)=>setShowAlert(false)}>
+                        Not Now
                   </button>
+                  </div>
+                  </Col>
+                   </Row>
+                  
+                 
                    
                    
-                    </span>
+                    
                   </Alert>}
             </Col>
           </Row>
-          <Row>
+          <Row style ={{marginTop:'30px'}}>
 
             <Col lg={3}>
               <Link to="/admin/newmoc">

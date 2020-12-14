@@ -538,7 +538,7 @@ const PreviewMOCModal = ({
           </tr> */}
         </table>
 
-        <table style={{ marginTop: "30px" }}>
+        <table style={{ marginTop: "30px", width: "100%" }}>
           <tr>
             <th
               className="custom_table custom_data"
