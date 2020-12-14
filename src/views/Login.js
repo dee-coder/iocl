@@ -12,6 +12,9 @@ import {
 import { Redirect } from "react-router-dom";
 
 function Loginpage() {
+  useEffect(() => {
+    localStorage.getItem("info") !== null && setRedirectToDashboard(true);
+  }, [okLogin]);
   const creds = {
     email: "hello@codifiedweb.com",
     password: "1234QWER",
@@ -19,20 +22,22 @@ function Loginpage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [RedirectToDashBoard, setRedirectToDashboard] = useState(false);
+  const [okLogin, setokLogin] = useState(false);
 
   function validateForm() {
     return email.length > 0 && password.length > 0;
   }
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
     if (email === creds.email && password === creds.password) {
       localStorage.setItem("info", JSON.stringify(creds));
-      setRedirectToDashboard(true);
+      setokLogin(true);
+      window.location.reload();
     } else {
       alert("Email or password is incorrect");
     }
-  }
+  };
   return (
     <Grid fluid style={{ padding: "50px" }}>
       {RedirectToDashBoard && <Redirect to="/admin/dashboard" />}

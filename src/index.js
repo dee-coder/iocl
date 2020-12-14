@@ -38,7 +38,6 @@ ReactDOM.render(
       ) : (
         <div>
           <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-          <Redirect from="/" to="/admin/dashboard" />
         </div>
       )}
     </Switch>
