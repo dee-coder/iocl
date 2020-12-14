@@ -79,7 +79,15 @@ const Dashboard = () => {
                       &#x2715;
                     </button>
                     <span>
-                    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie malesuada.
+                  MOC #1234 will be expired in 3 days.<br />
+                  <button className="btn btn-primary">
+                    View MOC
+                  </button>
+                  <button className="btn btn-secondary">
+                    Not Now
+                  </button>
+                   
+                   
                     </span>
                   </Alert>}
             </Col>
