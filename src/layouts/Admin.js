@@ -30,6 +30,8 @@ import { style } from "../variables/Variables.jsx";
 import routes from "../routes.js";
 
 import image from "../assets/img/sidebar-3.jpg";
+import EditMOC from "../views/EditMOC";
+import MyAccount from "../views/myAccount";
 
 class Admin extends Component {
   constructor(props) {
@@ -96,6 +98,8 @@ class Admin extends Component {
           }
         })}
         <Route path="/admin/viewmoc/:id" component={ViewMOC} />
+        <Route path="/admin/edit/:id" component={EditMOC} />
+        <Route path="/admin/account" component={MyAccount} />
       </div>
     );
   };

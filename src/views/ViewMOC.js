@@ -1,17 +1,24 @@
 import React from "react";
 import { Grid } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 const ViewMOC = () => {
   return (
     <Grid fluid style={{ padding: "50px" }}>
+      
       <div className="card">
-        <div style={{ float: "right", padding: "12px" }}>
-          <button style={{ margin: "5px" }} className="btn btn-secondary">
-            Print
-          </button>
-          <button style={{ margin: "5px" }} className="btn btn-primary">
-            Edit
-          </button>
+        <div className="row">
+            <div className="col-md-2">
+            <Link to="/admin/mymocs">Back to My MOCS</Link>
+              </div>
+            <div className="col-md-10">
+                <div style={{ float: "right", padding: "12px" }}>
+                  <button style={{ margin: "5px" }} className="btn btn-secondary">Print</button>
+                  <button style={{ margin: "5px" }} className="btn btn-primary">Edit</button>
+                </div>
+            </div>
         </div>
+      
+       
         <div className="card-body" style={{ padding: "20px" }}>
           <table className="custom_table custom_table_">
             <tr>

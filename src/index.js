@@ -27,10 +27,12 @@ import "./assets/css/demo.css";
 import "./assets/css/pe-icon-7-stroke.css";
 
 import AdminLayout from "./layouts/Admin";
+import Loginpage from "../src/views/Login";
 
 ReactDOM.render(
   <BrowserRouter basename="/">
     <Switch>
+     <Route path="/login" component={Loginpage}/> 
       <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
       <Redirect from="/" to="/admin/dashboard" />
     </Switch>

@@ -17,7 +17,7 @@
 */
 import React, { useState } from "react";
 import ChartistGraph from "react-chartist";
-import { Grid, Row, Col, Table, Alert } from "react-bootstrap";
+import { Grid, Row, Col, Table, Alert, Label } from "react-bootstrap";
 import { thArray, tdArray } from "../variables/Variables.jsx";
 
 
@@ -206,8 +206,10 @@ const Dashboard = () => {
             </Col> */}
           </Row>
           <Row style ={{marginTop:'50px'}}>
+            
             <Col lg={12}>
-            <div className="card">
+            <h3  style={{fontWeight:'400'}}>Recent MOCs</h3>
+            <div className="card" style={{ marginTop: "30px" }}>               
               <div className="card-body" style={{ padding: "30px" }}>
                 <Table striped hover>
                   <thead>
