@@ -30,11 +30,13 @@ const NewMOC = () => {
   const [ChangeProposed, setChangeProposed] = useState("");
   const [HazardsIdentified, setHazardsIdentified] = useState("");
   const [AdditionalPrecautions, setAdditionalPrecautions] = useState("");
-  const [ReviseddrawingsFrom, setReviseddrawingsFrom] = useState("");
-  const [ReviseddrawingsTo, setReviseddrawingsTo] = useState("");
+  const [ReviseddrawingsFrom, setReviseddrawingsFrom] = useState(new Date());
+  const [ReviseddrawingsTo, setReviseddrawingsTo] = useState(new Date());
   const [Remarks, setRemarks] = useState("");
   const [Reviewer, setReviewer] = useState("");
+  
   return (
+
     <div style={{ padding: "50px" }}>
       <Row>
         <Col>
@@ -288,6 +290,7 @@ const NewMOC = () => {
                       style={{ marginTop: "10px" }}
                       onChange={(e) => setReviseddrawingsFrom(e)}
                       value={ReviseddrawingsFrom}
+                    
                     />
                   </div>
                 </Col>
@@ -302,6 +305,7 @@ const NewMOC = () => {
                       style={{ marginTop: "10px" }}
                       onChange={(e) => setReviseddrawingsTo(e)}
                       value={ReviseddrawingsTo}
+                    
                     />
                   </div>
                 </Col>

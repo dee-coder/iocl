@@ -8,6 +8,7 @@ import {
   Label,
   Form,
   Button,
+  Image
 } from "react-bootstrap";
 import { Redirect } from "react-router-dom";
 
@@ -45,6 +46,7 @@ function Loginpage() {
         className="login-form"
         style={{ width: "340px", margin: "50px auto", fontSize: "15px" }}
       >
+       
         <Form
           onSubmit={handleSubmit}
           style={{
@@ -54,6 +56,17 @@ function Loginpage() {
             padding: "30px",
           }}
         >
+           <div className="row">
+            <div className="col-md-12">
+              <div className="text-center">
+              <Image 
+              style={{width:'80px', height:'auto'}}  
+              src="/logo.png" fluid className="img-fluid" />
+              </div>
+
+            </div>
+          
+          </div>    
           <h2 className="text-center">Log in</h2>
           <FormGroup controlId="email">
             <FormControl
